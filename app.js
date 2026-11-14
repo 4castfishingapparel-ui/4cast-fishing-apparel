@@ -1,30 +1,43 @@
 document.addEventListener('DOMContentLoaded', function () {
-  initCart();
+  initDesignBag();
   initCustomizer();
   initSizeSelectors();
-  initCheckoutHandoff();
+  initDesignRequest();
+  initReveal();
 });
 
-function getCart() {
+function getBag() {
   try { return JSON.parse(localStorage.getItem('4cast-cart') || '[]'); } catch (e) { return []; }
 }
-function setCart(cart) { localStorage.setItem('4cast-cart', JSON.stringify(cart)); }
-function renderCartCount() {
+function setBag(bag) { localStorage.setItem('4cast-cart', JSON.stringify(bag)); }
+function renderBagCount() {
   var el = document.getElementById('cart-count');
-  if (el) el.textContent = getCart().length;
+  if (el) el.textContent = getBag().length;
 }
-function initCart() {
-  renderCartCount();
+function initDesignBag() {
+  renderBagCount();
   document.querySelectorAll('.add-cart').forEach(function (btn) {
+    if (!btn.getAttribute('data-label')) btn.setAttribute('data-label', btn.textContent);
     btn.addEventListener('click', function () {
-      var cart = getCart();
-      cart.push({ garment: btn.getAttribute('data-garment') || '4CAST item', timestamp: new Date().toISOString() });
-      setCart(cart);
-      renderCartCount();
-      btn.textContent = 'Added ✓';
-      setTimeout(function () { btn.textContent = 'Add To Cart'; }, 1200);
+      var bag = getBag();
+      bag.push({ garment: btn.getAttribute('data-garment') || '4CAST item', timestamp: new Date().toISOString() });
+      setBag(bag);
+      renderBagCount();
+      btn.textContent = 'Added to Bag ✓';
+      setTimeout(function () { btn.textContent = btn.getAttribute('data-label'); }, 1300);
     });
   });
+}
+
+function currentDesign() {
+  var select = document.getElementById('garment-select');
+  var input = document.getElementById('custom-name');
+  var activeSize = document.querySelector('.size-btn.active');
+  return {
+    garment: select ? select.value : null,
+    name: input ? input.value.trim().toUpperCase() : null,
+    size: activeSize ? activeSize.getAttribute('data-size') : null
+  };
 }
 
 function initCustomizer() {
@@ -32,46 +45,81 @@ function initCustomizer() {
   var preview = document.getElementById('preview-name');
   var select = document.getElementById('garment-select');
   var garmentLabel = document.getElementById('preview-garment');
-  if (input && preview) {
-    var render = function () {
-      var v = (input.value || '').trim().toUpperCase();
-      preview.textContent = v ? v : 'YOUR NAME';
-    };
-    input.addEventListener('input', render);
-    render();
+  var stage = document.getElementById('preview-stage');
+  var useEl = document.getElementById('preview-use');
+  var count = document.getElementById('char-count');
+  var sumName = document.getElementById('summary-name');
+  var sumGarment = document.getElementById('summary-garment');
+
+  function renderName() {
+    var v = (input.value || '').trim().toUpperCase();
+    if (preview) preview.textContent = v ? v : 'YOUR NAME';
+    if (sumName) sumName.textContent = v ? v : 'YOUR NAME';
+    if (count) count.textContent = (input.value || '').length;
   }
-  if (select && garmentLabel) {
+  if (input && preview) {
+    input.addEventListener('input', renderName);
+    renderName();
+  }
+  if (select) {
     select.addEventListener('change', function () {
-      garmentLabel.textContent = '[ ' + select.value + ' ]';
+      var opt = select.options[select.selectedIndex];
+      if (garmentLabel) garmentLabel.textContent = select.value;
+      if (sumGarment) sumGarment.textContent = select.value;
+      if (useEl && opt.getAttribute('data-art')) useEl.setAttribute('href', '#svg-' + opt.getAttribute('data-art'));
+      if (stage && opt.getAttribute('data-stage')) {
+        stage.classList.remove('stage-camo', 'stage-cobalt', 'stage-coral');
+        stage.classList.add(opt.getAttribute('data-stage'));
+      }
     });
   }
 }
 
 function initSizeSelectors() {
   var btns = document.querySelectorAll('.size-btn');
+  var sumSize = document.getElementById('summary-size');
   btns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       btns.forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
+      if (sumSize) sumSize.textContent = btn.getAttribute('data-size');
     });
   });
 }
 
-function initCheckoutHandoff() {
-  var btn = document.getElementById('checkout-btn');
-  if (!btn) return;
-  btn.addEventListener('click', function () {
-    var select = document.getElementById('garment-select');
-    var input = document.getElementById('custom-name');
-    var activeSize = document.querySelector('.size-btn.active');
-    var payload = {
-      brandEmail: '4castfishingapparel@gmail.com',
-      garment: select ? select.value : null,
-      customizationText: input ? input.value.trim().toUpperCase() : null,
-      size: activeSize ? activeSize.getAttribute('data-size') : null,
-      timestamp: new Date().toISOString()
-    };
-    console.log('4CAST checkout handoff payload:', payload);
-    alert('Stripe Secure Checkout Handoff Initialized. Routing order payload & custom text data to: 4castfishingapparel@gmail.com (Note: Live payment gateway triggers upon Chris confirming price points & supplier activation).');
-  });
+function initDesignRequest() {
+  var btn = document.getElementById('request-btn');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var d = currentDesign();
+      var subject = encodeURIComponent('4CAST Design Request — ' + (d.garment || 'Custom garment'));
+      var body = encodeURIComponent(
+        'Hi 4CAST team,\n\nI would like this design:\n\nGarment: ' + (d.garment || '') +
+        '\nName on garment: ' + (d.name || '') +
+        '\nSize: ' + (d.size || '') +
+        '\nThread: 4CAST Gold\n\nPlease confirm launch pricing and next steps.\n'
+      );
+      window.location.href = 'mailto:4castfishingapparel@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  }
+  var legacy = document.getElementById('checkout-btn');
+  if (legacy) {
+    legacy.addEventListener('click', function () {
+      alert('Design requests are open now — checkout opens with launch pricing. Use "Send Design Request" and we will confirm everything by email.');
+    });
+  }
+}
+
+function initReveal() {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || !els.length) {
+    els.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { io.observe(el); });
 }

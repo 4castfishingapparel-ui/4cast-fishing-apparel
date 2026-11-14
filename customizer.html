@@ -74,11 +74,11 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 
 <main class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 py-12 px-4">
   <section id="preview-stage" class="preview-stage stage-camo rounded-lg p-8 flex flex-col items-center justify-center border border-gray-700 min-h-[380px]">
-    <p id="preview-garment" class="text-gray-200 text-sm mb-2 tracking-wide">Men's Rash Guard — Cypress Green Bass Camo (UPF 50+)</p>
+    <p id="preview-garment" class="text-gray-200 text-sm mb-2 tracking-wide">Men's Rash Guard — Cypress Green Bass Camo</p>
     <svg class="garment-svg" style="height:210px"><use id="preview-use" href="#svg-hoodie-camo"/></svg>
     <div id="chest-logo" class="logo-tint chest-logo" style="background-color:#d4af37" role="img" aria-label="4CAST logo on chest"></div>
     <p id="preview-name" class="brand-font-mono gold-glow text-5xl font-extrabold text-[#d4af37] mt-2">YOUR NAME</p>
-    <p class="text-xs text-gray-300 mt-4 tracking-widest">CUSTOM NAME &bull; GOLD THREAD &bull; BACK PLACEMENT</p>
+    <p id="preview-caption" class="text-xs text-gray-300 mt-4 tracking-widest">CUSTOM NAME &bull; 4CAST GOLD THREAD &bull; BACK PLACEMENT</p>
   </section>
 
   <section>
@@ -92,7 +92,7 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 
     <label class="block mt-6 text-sm font-semibold" for="garment-select">Garment style</label>
     <select id="garment-select" class="form-input w-full mt-2 rounded bg-[#1e2226] border border-gray-600 px-4 py-3 text-gray-100">
-      <option value="Men's Rash Guard — Cypress Green Bass Camo (UPF 50+)" data-art="hoodie-camo" data-stage="stage-camo">Men's Rash Guard — Cypress Green Bass Camo (UPF 50+)</option>
+      <option value="Men's Rash Guard — Cypress Green Bass Camo" data-art="hoodie-camo" data-stage="stage-camo">Men's Rash Guard — Cypress Green Bass Camo</option>
       <option value="Women's Rash Guard — Marlin Cobalt" data-art="jersey-cobalt" data-stage="stage-cobalt">Women's Rash Guard — Marlin Cobalt</option>
       <option value="Recycled Unisex Hoodie — Coral Pink" data-art="hoodie-coral" data-stage="stage-coral">Recycled Unisex Hoodie — Coral Pink</option>
     </select>
@@ -119,7 +119,7 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 
     <div class="summary-panel mt-7">
       <dl>
-        <dt>GARMENT</dt><dd id="summary-garment">Men's Rash Guard — Cypress Green Bass Camo (UPF 50+)</dd>
+        <dt>GARMENT</dt><dd id="summary-garment">Men's Rash Guard — Cypress Green Bass Camo</dd>
         <dt>NAME ON GARMENT</dt><dd id="summary-name">YOUR NAME</dd>
         <dt>SIZE</dt><dd id="summary-size">L</dd>
         <dt>THREAD</dt><dd id="summary-thread">4CAST Gold</dd>
@@ -134,9 +134,9 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 
 <section class="max-w-6xl mx-auto px-4 pb-14">
   <div class="grid md:grid-cols-3 gap-6 text-sm">
-    <div class="summary-panel"><h3 class="font-bold">The Lake Line</h3><p class="text-gray-400 mt-2">Cypress Green Bass Camo — UPF 50+ sun hoodie with moisture-wicking poly-spandex and laser-cut underarm ventilation.</p></div>
-    <div class="summary-panel"><h3 class="font-bold">The Offshore Line</h3><p class="text-gray-400 mt-2">Marlin Cobalt — saltwater performance fabric, quick-dry 4-way stretch, tailored athletic fit with thumbholes.</p></div>
-    <div class="summary-panel"><h3 class="font-bold">The Resort Line</h3><p class="text-gray-400 mt-2">Coral Pink — the women's resort UV hoodie, made to pair with the His &amp; Her lineup.</p></div>
+    <div class="summary-panel"><h3 class="font-bold">The Lake Line</h3><p class="text-gray-400 mt-2">Cypress Green Bass Camo — long-sleeve rash guard with moisture-wicking stretch fabric and UPF sun protection.</p></div>
+    <div class="summary-panel"><h3 class="font-bold">The Offshore Line</h3><p class="text-gray-400 mt-2">Marlin Cobalt — a tailored women's rash guard with UPF sun protection, made to match the men's offshore colorway.</p></div>
+    <div class="summary-panel"><h3 class="font-bold">The Resort Line</h3><p class="text-gray-400 mt-2">Coral Pink — our cozy recycled unisex hoodie in the brightest colorway of the line, made to pair with the His &amp; Hers lineup.</p></div>
   </div>
 </section>
 

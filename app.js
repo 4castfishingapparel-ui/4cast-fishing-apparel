@@ -126,6 +126,8 @@ function initThreadPicker() {
       if (preview) { preview.style.color = color; preview.style.textShadow = '0 0 18px ' + color + '66'; }
       if (chest) chest.style.backgroundColor = color;
       if (sumThread) sumThread.textContent = btn.getAttribute('data-name');
+      var cap = document.getElementById('preview-caption');
+      if (cap) cap.textContent = 'CUSTOM NAME \u2022 ' + btn.getAttribute('data-name').toUpperCase() + ' THREAD \u2022 BACK PLACEMENT';
     });
   });
 }

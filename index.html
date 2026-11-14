@@ -4,91 +4,332 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>4CAST Fishing Apparel | Your Name On The Water</title>
+<meta name="description" content="4CAST Fishing Apparel — premium His & Her fishing apparel customized with your last name or boat name. Cypress Green Bass Camo hoodies, Marlin Cobalt offshore jerseys, board shorts, floating boonies and polarized sunglasses. Rooted in Central Florida.">
+<meta property="og:title" content="4CAST Fishing Apparel | Your Name On The Water">
+<meta property="og:description" content="Custom His & Her fishing apparel with your name or boat name in gold thread. From the lake to the blue water.">
+<meta property="og:type" content="website">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal800:'#1e2226', gold:'#d4af37', goldhover:'#e5c158', golddark:'#b8972b' } } } }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-[#121518] text-gray-100">
-<div class="bg-[#d4af37] text-[#121518] text-center text-sm font-semibold py-2 px-3">Tournament-Grade Performance &bull; Customize Your Gear With Your Last Name On The Back</div>
+
+<!-- SVG design assets: garment silhouettes + Gemini design patterns -->
+<svg width="0" height="0" class="absolute" aria-hidden="true">
+  <defs>
+    <pattern id="pattern-camo" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="#2f4633"/>
+      <ellipse cx="14" cy="16" rx="16" ry="9" fill="#1f3123"/>
+      <ellipse cx="44" cy="34" rx="18" ry="10" fill="#557055"/>
+      <ellipse cx="24" cy="50" rx="13" ry="7" fill="#6d8460"/>
+      <ellipse cx="52" cy="8" rx="10" ry="6" fill="#40543c"/>
+    </pattern>
+    <pattern id="pattern-cobalt" width="60" height="30" patternUnits="userSpaceOnUse">
+      <rect width="60" height="30" fill="#123f6e"/>
+      <path d="M0 10 Q15 2 30 10 T60 10" stroke="#2f6ea6" stroke-width="4" fill="none"/>
+      <path d="M0 24 Q15 16 30 24 T60 24" stroke="#1d5a8f" stroke-width="4" fill="none"/>
+    </pattern>
+    <pattern id="pattern-coral" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#cf7488"/>
+      <path d="M-10 30 L30 -10 M0 50 L50 0" stroke="#e39aab" stroke-width="6"/>
+    </pattern>
+    <symbol id="svg-hoodie-camo" viewBox="0 0 200 160">
+      <path d="M72 34 Q100 8 128 34 L146 52 L172 104 L146 114 L146 146 L54 146 L54 114 L28 104 L54 52 Z" fill="url(#pattern-camo)" stroke="#d4af37" stroke-width="3"/>
+      <path d="M78 36 Q100 20 122 36 Q100 48 78 36Z" fill="#1e2226" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="100" cy="72" r="10" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+      <text x="100" y="78" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="13" fill="#d4af37">4</text>
+      <rect x="76" y="112" width="48" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="2"/>
+    </symbol>
+    <symbol id="svg-hoodie-coral" viewBox="0 0 200 160">
+      <path d="M72 34 Q100 8 128 34 L146 52 L172 104 L146 114 L146 146 L54 146 L54 114 L28 104 L54 52 Z" fill="url(#pattern-coral)" stroke="#d4af37" stroke-width="3"/>
+      <path d="M78 36 Q100 20 122 36 Q100 48 78 36Z" fill="#1e2226" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="100" cy="72" r="10" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+      <text x="100" y="78" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="13" fill="#d4af37">4</text>
+      <rect x="76" y="112" width="48" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="2"/>
+    </symbol>
+    <symbol id="svg-jersey-cobalt" viewBox="0 0 200 160">
+      <path d="M74 26 L54 46 L30 96 L56 106 L56 146 L144 146 L144 106 L170 96 L146 46 L126 26 Q100 44 74 26Z" fill="url(#pattern-cobalt)" stroke="#d4af37" stroke-width="3"/>
+      <path d="M84 28 Q100 42 116 28 L100 52Z" fill="#1e2226" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="100" cy="76" r="10" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+      <text x="100" y="82" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="13" fill="#d4af37">4</text>
+    </symbol>
+    <symbol id="svg-shorts" viewBox="0 0 200 160">
+      <path d="M56 34 L144 34 L152 132 L112 132 L100 78 L88 132 L48 132 Z" fill="#274b63" stroke="#d4af37" stroke-width="3"/>
+      <rect x="56" y="34" width="88" height="14" fill="#1e2226" stroke="#d4af37" stroke-width="2"/>
+      <rect x="118" y="58" width="20" height="30" fill="none" stroke="#e5c158" stroke-width="2"/>
+    </symbol>
+    <symbol id="svg-boonie" viewBox="0 0 200 160">
+      <ellipse cx="100" cy="106" rx="82" ry="18" fill="#3d5a43" stroke="#d4af37" stroke-width="3"/>
+      <path d="M58 104 Q62 52 100 52 Q138 52 142 104Z" fill="url(#pattern-camo)" stroke="#d4af37" stroke-width="3"/>
+      <rect x="58" y="88" width="84" height="10" fill="#d4af37"/>
+    </symbol>
+    <symbol id="svg-glasses" viewBox="0 0 200 160">
+      <path d="M18 62 L182 62 L168 108 Q164 124 146 124 L116 124 Q102 124 100 106 Q98 124 84 124 L54 124 Q36 124 32 108Z" fill="#1e2226" stroke="#d4af37" stroke-width="3"/>
+      <path d="M44 74 L84 74 L80 110 L52 110Z M116 74 L156 74 L148 110 L120 110Z" fill="#2f6ea6" opacity="0.85"/>
+    </symbol>
+    <symbol id="svg-cap" viewBox="0 0 200 160">
+      <path d="M44 100 Q48 46 100 46 Q152 46 156 100 L188 108 Q190 122 172 122 L28 122 Q10 122 12 108Z" fill="#1e2226" stroke="#d4af37" stroke-width="3"/>
+      <path d="M100 46 L100 100 M70 52 L76 100 M130 52 L124 100" stroke="#374151" stroke-width="3"/>
+      <circle cx="100" cy="80" r="11" fill="none" stroke="#d4af37" stroke-width="3"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="bg-[#d4af37] text-[#121518] text-center text-sm font-semibold py-2 px-3">THE LAUNCH COLLECTION &bull; CUSTOM LAST NAME &amp; BOAT NAME PERSONALIZATION &bull; HIS &amp; HER</div>
 
 <header class="sticky-header bg-[#1e2226]/95 border-b border-gray-700">
   <nav class="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
-    <a href="index.html" class="text-2xl font-extrabold tracking-wide">4CAST <span class="text-[#d4af37] text-base align-middle">FISHING APPAREL</span></a>
+    <a href="index.html" class="brand-lockup"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="10" fill="#121518" stroke="#d4af37" stroke-width="2.5"/><path d="M29 7v20c0 6-4.2 10-9.5 10S10 33 11 27.5" fill="none" stroke="#d4af37" stroke-width="4" stroke-linecap="round"/><path d="M11 27.5 7.5 21M11 27.5l6.5-1.5" fill="none" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round"/></svg>4CAST <span>FISHING APPAREL</span></a>
     <div class="hidden md:flex gap-6 text-sm">
-      <a href="index.html" class="hover:text-[#e5c158]">Home</a>
-      <a href="#collections" class="hover:text-[#e5c158]">His &amp; Her Collections</a>
-      <a href="customizer.html" class="hover:text-[#e5c158]">Customizer</a>
-      <a href="#gear" class="hover:text-[#e5c158]">Pro Gear</a>
+      <a href="#shop" class="hover:text-[#e5c158]">Shop the Launch</a>
+      <a href="#his-her" class="hover:text-[#e5c158]">His &amp; Her</a>
+      <a href="customizer.html" class="hover:text-[#e5c158]">Custom Studio</a>
+      <a href="#story" class="hover:text-[#e5c158]">Our Water</a>
+      <a href="#faq" class="hover:text-[#e5c158]">FAQ</a>
     </div>
     <div class="flex items-center gap-3">
-      <span class="text-sm">Cart: <span id="cart-count">0</span></span>
+      <span class="text-sm hidden sm:inline">Design Bag: <span id="cart-count">0</span></span>
       <a href="customizer.html" class="btn-gold rounded px-4 py-2 text-sm">Customize Gear</a>
     </div>
   </nav>
 </header>
 
-<section class="max-w-6xl mx-auto text-center py-16 px-4">
-  <p class="text-[#d4af37] tracking-widest text-sm font-semibold">CENTRAL FLORIDA ROOTS &bull; BUILT FOR THE PROS</p>
-  <h1 class="text-5xl md:text-6xl font-extrabold mt-4">Your Name On <span class="gold-glow text-[#d4af37]">The Water</span></h1>
-  <p class="max-w-2xl mx-auto mt-6 text-gray-300">From dawn on the lake in Cypress Green Bass Camo to the deep blue offshore marlin grounds. Technical UPF 50+ performance gear, custom-stitched with your name and legacy.</p>
-  <div class="mt-8 flex gap-4 justify-center">
-    <a href="#collections" class="btn-gold rounded px-6 py-3 font-semibold">Explore Collections</a>
-    <a href="customizer.html" class="border border-[#d4af37] text-[#d4af37] rounded px-6 py-3 font-semibold hover:bg-[#1e2226]">Try Customizer</a>
-  </div>
-</section>
-
-<section id="collections" class="max-w-6xl mx-auto py-10 px-4">
-  <h2 class="text-3xl font-bold text-center">The Jason &amp; Katie Lineup</h2>
-  <div class="grid md:grid-cols-2 gap-6 mt-8">
-    <div class="product-card bg-[#1e2226] rounded-lg p-6 border border-gray-700">
-      <div class="bg-gray-700/50 rounded h-40 flex items-center justify-center text-gray-400">[ Cypress Green Bass Camo Base ]</div>
-      <h3 class="text-xl font-bold mt-4">His &mdash; Cypress Green Bass Camo Sun Hoodie</h3>
-      <ul class="text-gray-300 text-sm mt-2 list-disc ml-5">
-        <li>UPF 50+ sun protection</li>
-        <li>Moisture-wicking poly-spandex blend</li>
-        <li>Laser-cut underarm ventilation</li>
-        <li>Custom last-name back embroidery</li>
-      </ul>
-      <p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p>
-      <button class="add-cart btn-gold rounded px-4 py-2 mt-3 text-sm" data-garment="Cypress Green Bass Camo Sun Hoodie">Add To Cart</button>
+<!-- HERO -->
+<section class="hero-shell">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center py-16 px-4">
+    <div class="reveal">
+      <p class="text-[#d4af37] tracking-[0.25em] text-xs font-bold">CENTRAL FLORIDA ROOTS &bull; GOLD &amp; CHARCOAL</p>
+      <h1 class="hero-title">Your Name On <span class="gold-glow text-[#d4af37]">The Water</span></h1>
+      <p class="mt-6 text-lg text-gray-300">Some gear has a brand name on it. Ours has <em>yours</em>. Premium His &amp; Her fishing apparel — UPF 50+ sun hoodies, offshore performance jerseys, board shorts, floating boonies and polarized sunglasses — customized with your last name or your boat name in gold thread.</p>
+      <p class="mt-4 text-gray-400">From dawn on the lake in Cypress Green Bass Camo to the deep blue in Marlin Cobalt. Not mass-made. Made for you.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#shop" class="btn-gold rounded px-6 py-3 font-semibold">Shop the Launch Collection</a>
+        <a href="customizer.html" class="btn-outline-gold rounded px-6 py-3 font-semibold">Preview Your Name &rarr;</a>
+      </div>
+      <div class="mt-10 grid grid-cols-3 gap-3 text-center text-xs sm:text-sm">
+        <div class="stat-chip"><strong>UPF 50+</strong><span>Sun hoodies &amp; boonies</span></div>
+        <div class="stat-chip"><strong>His &amp; Her</strong><span>Matched Jason &amp; Katie lineup</span></div>
+        <div class="stat-chip"><strong>Your Name</strong><span>Last name or boat name</span></div>
+      </div>
     </div>
-    <div class="product-card bg-[#1e2226] rounded-lg p-6 border border-gray-700">
-      <div class="bg-gray-700/50 rounded h-40 flex items-center justify-center text-gray-400">[ Marlin Cobalt Offshore Base ]</div>
-      <h3 class="text-xl font-bold mt-4">Her &mdash; Marlin Cobalt Offshore Performance Jersey</h3>
-      <ul class="text-gray-300 text-sm mt-2 list-disc ml-5">
-        <li>Saltwater-specific performance fabric</li>
-        <li>Quick-dry 4-way stretch</li>
-        <li>Tailored feminine athletic fit, thumbholes</li>
-        <li>Custom-stitched naming</li>
-      </ul>
-      <p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p>
-      <button class="add-cart btn-gold rounded px-4 py-2 mt-3 text-sm" data-garment="Marlin Cobalt Offshore Performance Jersey">Add To Cart</button>
+    <div class="hero-stage reveal" aria-label="Jason and Katie launch garments with the name REGA in gold thread">
+      <div class="hero-card">
+        <svg class="garment-svg"><use href="#svg-hoodie-camo"/></svg>
+        <p class="hero-name">REGA</p>
+        <p class="hero-card-label">HIS &mdash; CYPRESS GREEN BASS CAMO</p>
+      </div>
+      <div class="hero-card">
+        <svg class="garment-svg"><use href="#svg-jersey-cobalt"/></svg>
+        <p class="hero-name">REGA</p>
+        <p class="hero-card-label">HER &mdash; MARLIN COBALT OFFSHORE</p>
+      </div>
+      <p class="hero-stage-note">THE JASON &amp; KATIE LINEUP &bull; GOLD THREAD ON EVERY NAME</p>
     </div>
   </div>
 </section>
 
-<section class="max-w-6xl mx-auto py-10 px-4">
-  <div class="bg-[#1e2226] border border-[#d4af37]/40 rounded-lg p-8 text-center">
-    <h2 class="text-3xl font-bold">Put Your Name On The Water</h2>
-    <p class="text-gray-300 mt-3">Personalization Engine &mdash; preview your last name, partner&rsquo;s name, or boat name in gold thread, live.</p>
-    <a href="customizer.html" class="btn-gold rounded px-6 py-3 font-semibold inline-block mt-6">Preview Custom Design</a>
+<!-- SHOP -->
+<section id="shop" class="max-w-6xl mx-auto py-14 px-4">
+  <p class="section-eyebrow">THE LAUNCH COLLECTION</p>
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mt-2">Built for Two Florida Waters</h2>
+  <p class="text-center text-gray-400 mt-3 max-w-2xl mx-auto">Every launch piece from the 4CAST design suite — the lake line, the offshore line, and the gear that finishes the kit. Launch pricing publishes with the collection drop; start your design now and be first in line.</p>
+
+  <div class="grid md:grid-cols-2 gap-6 mt-10">
+    <article class="product-card reveal">
+      <div class="visual visual-camo"><svg class="garment-svg"><use href="#svg-hoodie-camo"/></svg><span class="visual-name">YOUR NAME</span></div>
+      <div class="p-6">
+        <p class="product-tag">HIS &mdash; THE LAKE LINE</p>
+        <h3 class="text-xl font-bold mt-1">Cypress Green Bass Camo Sun Hoodie</h3>
+        <ul class="spec-list">
+          <li>UPF 50+ sun protection</li>
+          <li>Moisture-wicking poly-spandex blend</li>
+          <li>Laser-cut underarm ventilation</li>
+          <li>Custom last-name back embroidery in gold thread</li>
+        </ul>
+        <div class="card-actions">
+          <a href="customizer.html" class="btn-gold rounded px-4 py-2 text-sm">Customize Yours</a>
+          <button class="add-cart btn-ghost rounded px-4 py-2 text-sm" data-garment="Cypress Green Bass Camo Sun Hoodie">Add to Design Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card reveal">
+      <div class="visual visual-cobalt"><svg class="garment-svg"><use href="#svg-jersey-cobalt"/></svg><span class="visual-name">YOUR NAME</span></div>
+      <div class="p-6">
+        <p class="product-tag">HER &mdash; THE OFFSHORE LINE</p>
+        <h3 class="text-xl font-bold mt-1">Marlin Cobalt Offshore Performance Jersey</h3>
+        <ul class="spec-list">
+          <li>Saltwater-specific performance fabric</li>
+          <li>Quick-dry, 4-way stretch</li>
+          <li>Tailored feminine athletic fit with thumbholes</li>
+          <li>Custom-stitched naming in gold thread</li>
+        </ul>
+        <div class="card-actions">
+          <a href="customizer.html" class="btn-gold rounded px-4 py-2 text-sm">Customize Yours</a>
+          <button class="add-cart btn-ghost rounded px-4 py-2 text-sm" data-garment="Marlin Cobalt Offshore Performance Jersey">Add to Design Bag</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6 mt-6">
+    <article class="product-card reveal">
+      <div class="visual visual-coral"><svg class="garment-svg"><use href="#svg-hoodie-coral"/></svg><span class="visual-name">YOUR NAME</span></div>
+      <div class="p-6">
+        <p class="product-tag">HER &mdash; RESORT LINE</p>
+        <h3 class="text-lg font-bold mt-1">Coral Pink Women's Resort UV Hoodie</h3>
+        <ul class="spec-list">
+          <li>Resort-weight UV hoodie</li>
+          <li>Custom name personalization</li>
+          <li>Pairs with the His &amp; Her lineup</li>
+        </ul>
+        <div class="card-actions">
+          <a href="customizer.html" class="btn-gold rounded px-4 py-2 text-sm">Customize Yours</a>
+          <button class="add-cart btn-ghost rounded px-4 py-2 text-sm" data-garment="Coral Pink Women's Resort UV Hoodie">Add to Design Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card reveal">
+      <div class="visual"><svg class="garment-svg"><use href="#svg-shorts"/></svg></div>
+      <div class="p-6">
+        <p class="product-tag">PRO GEAR</p>
+        <h3 class="text-lg font-bold mt-1">Amphibious Board Shorts</h3>
+        <ul class="spec-list">
+          <li>Quick-dry, 4-way stretch</li>
+          <li>Reinforced plier pockets</li>
+          <li>Built for boat-to-dock days</li>
+        </ul>
+        <div class="card-actions">
+          <button class="add-cart btn-gold rounded px-4 py-2 text-sm" data-garment="Amphibious Board Shorts">Add to Design Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card reveal">
+      <div class="visual visual-camo"><svg class="garment-svg"><use href="#svg-boonie"/></svg></div>
+      <div class="p-6">
+        <p class="product-tag">PRO GEAR</p>
+        <h3 class="text-lg font-bold mt-1">Floating Boonie Hat</h3>
+        <ul class="spec-list">
+          <li>UPF 50+ coverage</li>
+          <li>Water-repellent finish</li>
+          <li>Float foam core — it floats if it goes over</li>
+        </ul>
+        <div class="card-actions">
+          <button class="add-cart btn-gold rounded px-4 py-2 text-sm" data-garment="Floating Boonie Hat">Add to Design Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card reveal">
+      <div class="visual"><svg class="garment-svg"><use href="#svg-glasses"/></svg></div>
+      <div class="p-6">
+        <p class="product-tag">PRO GEAR</p>
+        <h3 class="text-lg font-bold mt-1">Polarized Sport Sunglasses</h3>
+        <ul class="spec-list">
+          <li>TAC glare-reducing polarized lenses</li>
+          <li>Custom temple branding</li>
+          <li>Made to read the water, not the glare</li>
+        </ul>
+        <div class="card-actions">
+          <button class="add-cart btn-gold rounded px-4 py-2 text-sm" data-garment="Polarized Sport Sunglasses">Add to Design Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card reveal">
+      <div class="visual"><svg class="garment-svg"><use href="#svg-cap"/></svg></div>
+      <div class="p-6">
+        <p class="product-tag">PRO GEAR</p>
+        <h3 class="text-lg font-bold mt-1">3D Embroidered Trucker Hat</h3>
+        <ul class="spec-list">
+          <li>Structured mesh-back build</li>
+          <li>3D gold-thread icon logo</li>
+          <li>The dock-day finishing piece</li>
+        </ul>
+        <div class="card-actions">
+          <button class="add-cart btn-gold rounded px-4 py-2 text-sm" data-garment="3D Embroidered Trucker Hat">Add to Design Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card palette-card reveal">
+      <div class="p-6">
+        <p class="product-tag">THE 4CAST PALETTE</p>
+        <h3 class="text-lg font-bold mt-1">Gold &amp; Charcoal, Three Waters</h3>
+        <div class="swatches">
+          <span class="swatch sw-camo">Cypress Green</span>
+          <span class="swatch sw-cobalt">Marlin Cobalt</span>
+          <span class="swatch sw-coral">Coral Pink</span>
+          <span class="swatch sw-gold">4CAST Gold</span>
+          <span class="swatch sw-charcoal">Charcoal</span>
+        </div>
+        <p class="text-gray-400 text-sm mt-4">One signature palette across the whole line — so His &amp; Her always reads as one crew, on any water.</p>
+      </div>
+    </article>
   </div>
 </section>
 
-<section id="gear" class="max-w-6xl mx-auto py-10 px-4 pb-16">
-  <h2 class="text-3xl font-bold text-center">Tournament-Grade Accessories</h2>
-  <div class="grid md:grid-cols-4 gap-6 mt-8 text-sm">
-    <div class="product-card bg-[#1e2226] rounded-lg p-5 border border-gray-700"><h3 class="font-bold">Amphibious Board Shorts</h3><p class="text-gray-300 mt-2">Quick-dry, 4-way stretch, reinforced plier pockets.</p><p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p><button class="add-cart btn-gold rounded px-3 py-2 mt-3" data-garment="Amphibious Board Shorts">Add To Cart</button></div>
-    <div class="product-card bg-[#1e2226] rounded-lg p-5 border border-gray-700"><h3 class="font-bold">Floating Boonie Hat</h3><p class="text-gray-300 mt-2">UPF 50+, water-repellent, float foam core.</p><p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p><button class="add-cart btn-gold rounded px-3 py-2 mt-3" data-garment="Floating Boonie Hat">Add To Cart</button></div>
-    <div class="product-card bg-[#1e2226] rounded-lg p-5 border border-gray-700"><h3 class="font-bold">Polarized Sport Sunglasses</h3><p class="text-gray-300 mt-2">TAC glare-reducing lenses, custom temple branding.</p><p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p><button class="add-cart btn-gold rounded px-3 py-2 mt-3" data-garment="Polarized Sport Sunglasses">Add To Cart</button></div>
-    <div class="product-card bg-[#1e2226] rounded-lg p-5 border border-gray-700"><h3 class="font-bold">3D Embroidered Trucker Hat</h3><p class="text-gray-300 mt-2">Structured mesh-back, 3D gold-thread icon logo.</p><p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p><button class="add-cart btn-gold rounded px-3 py-2 mt-3" data-garment="3D Embroidered Trucker Hat">Add To Cart</button></div>
+<!-- HIS & HER / CUSTOM -->
+<section id="his-her" class="band">
+  <div class="max-w-6xl mx-auto py-14 px-4 grid lg:grid-cols-2 gap-10 items-center">
+    <div class="reveal">
+      <p class="section-eyebrow text-left">HIS &amp; HER &mdash; THE JASON &amp; KATIE LINEUP</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-2">We Don't Wear Matching Outfits. We Wear <span class="text-[#d4af37]">Ours.</span></h2>
+      <p class="text-gray-300 mt-4">Jason takes the morning bass water in Cypress Green. Katie runs the afternoon offshore in Marlin Cobalt. The camera keeps finding the same detail: their name, stitched in gold, right where it belongs.</p>
+      <ol class="steps">
+        <li><strong>1. Pick your water</strong><span>Cypress Green for the lake, Marlin Cobalt for the blue water, Coral Pink for resort days.</span></li>
+        <li><strong>2. Add your name</strong><span>Your last name, your partner's name, or your boat name — up to 16 characters.</span></li>
+        <li><strong>3. Preview it live</strong><span>See it in gold thread in the Custom Studio before anything is made.</span></li>
+      </ol>
+      <a href="customizer.html" class="btn-gold rounded px-6 py-3 font-semibold inline-block mt-8">Open the Custom Studio</a>
+    </div>
+    <div class="filmstrip reveal">
+      <div class="film-card"><span>0:00</span><h4>The Hook</h4><p>Dawn. A hand smooths a Cypress Green hoodie — and the name on the back is yours.</p></div>
+      <div class="film-card"><span>0:08</span><h4>First Cast</h4><p>Two names, side by side at the bow, mist lifting off a Florida lake.</p></div>
+      <div class="film-card"><span>0:15</span><h4>The Turn</h4><p>A wave splash flips green to blue — same crew, Marlin Cobalt, offshore.</p></div>
+      <div class="film-card"><span>0:22</span><h4>The Lineup</h4><p>Golden hour on the dock: shorts, boonie, polarized — the full kit, made for you.</p></div>
+    </div>
   </div>
 </section>
 
-<footer class="border-t border-gray-700 py-8 text-center text-sm text-gray-400">
-  <p>Rooted in Central Florida. Built for the competitive waters worldwide.</p>
+<!-- STORY -->
+<section id="story" class="max-w-6xl mx-auto py-14 px-4 text-center">
+  <p class="section-eyebrow">OUR WATER</p>
+  <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Rooted in Central Florida. Built for the Competitive Waters Worldwide.</h2>
+  <p class="text-gray-300 mt-4 max-w-3xl mx-auto">4CAST was designed between first cast and open water — for competitive anglers who fish hard and coastal resort days that run long, from Central Florida lakes to Key Largo blue water and Venice Beach sunsets. High-end, high-performance, and personal down to the last stitch.</p>
+  <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm">
+    <span class="place-chip">Central Florida Lakes</span>
+    <span class="place-chip">Key Largo</span>
+    <span class="place-chip">Venice Beach</span>
+    <span class="place-chip">The Blue Water</span>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="max-w-4xl mx-auto py-10 px-4 pb-16">
+  <h2 class="text-3xl font-extrabold text-center">Launch Questions</h2>
+  <div class="faq-list">
+    <details><summary>What can I put on my gear?</summary><p>Your last name, your partner's name, or your boat name — up to 16 characters, previewed live in gold thread in the Custom Studio.</p></details>
+    <details><summary>What sizes does the Custom Studio offer?</summary><p>S, M, L, XL and 2XL on the customizable garments.</p></details>
+    <details><summary>When do prices and checkout open?</summary><p>Launch pricing publishes with the collection drop, once the production partner is locked. Until then, send a design request from the Custom Studio and we'll confirm your design, price and next steps by email before anything is charged.</p></details>
+    <details><summary>How do I reach the brand?</summary><p>Email <a class="text-[#d4af37]" href="mailto:4castfishingapparel@gmail.com">4castfishingapparel@gmail.com</a> — that's the official 4CAST inbox for design requests and launch questions.</p></details>
+  </div>
+  <div class="cta-panel">
+    <h3>Put Your Name On The Water</h3>
+    <p>Start with the preview. It takes ten seconds — and it stops looking like gear and starts looking like yours.</p>
+    <a href="customizer.html" class="btn-gold rounded px-6 py-3 font-semibold inline-block mt-5">Preview Custom Design</a>
+  </div>
+</section>
+
+<footer class="border-t border-gray-700 py-8 text-center text-sm text-gray-400 px-4">
+  <p class="brand-lockup justify-center">4CAST <span>FISHING APPAREL</span></p>
+  <p class="mt-3">Rooted in Central Florida. Built for the competitive waters worldwide.</p>
   <p class="mt-2">Support: <a class="text-[#d4af37]" href="mailto:4castfishingapparel@gmail.com">4castfishingapparel@gmail.com</a></p>
   <p class="mt-2">&copy; 2026 4CAST Fishing Apparel. All rights reserved.</p>
 </footer>

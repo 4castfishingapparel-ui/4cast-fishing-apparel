@@ -74,10 +74,10 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 
 <main class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 py-12 px-4">
   <section id="preview-stage" class="preview-stage stage-camo rounded-lg p-8 flex flex-col items-center justify-center border border-gray-700 min-h-[380px]">
-    <p id="preview-garment" class="text-gray-200 text-sm mb-2 tracking-wide">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</p>
+    <p id="preview-garment" class="text-gray-200 text-sm mb-2 tracking-wide">Men's Rash Guard — Cypress Green Bass Camo (UPF 50+)</p>
     <svg class="garment-svg" style="height:210px"><use id="preview-use" href="#svg-hoodie-camo"/></svg>
     <div id="chest-logo" class="logo-tint chest-logo" style="background-color:#d4af37" role="img" aria-label="4CAST logo on chest"></div>
-    <p id="preview-name" class="brand-font-mono gold-glow text-5xl font-extrabold text-[#d4af37] mt-2">REGA</p>
+    <p id="preview-name" class="brand-font-mono gold-glow text-5xl font-extrabold text-[#d4af37] mt-2">YOUR NAME</p>
     <p class="text-xs text-gray-300 mt-4 tracking-widest">CUSTOM NAME &bull; GOLD THREAD &bull; BACK PLACEMENT</p>
   </section>
 
@@ -87,14 +87,14 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
     <p class="text-gray-400 mt-3">Type the name, pick the garment, choose a size — the preview updates live, exactly like it will sit on the back of the garment.</p>
 
     <label class="block mt-7 text-sm font-semibold" for="custom-name">Last name / partner name / boat name</label>
-    <input id="custom-name" type="text" maxlength="16" value="REGA" placeholder="e.g., REGA" class="form-input w-full mt-2 rounded bg-[#1e2226] border border-gray-600 px-4 py-3 text-gray-100">
+    <input id="custom-name" type="text" maxlength="16" value="" placeholder="e.g., YOUR LAST NAME" class="form-input w-full mt-2 rounded bg-[#1e2226] border border-gray-600 px-4 py-3 text-gray-100">
     <p class="text-xs text-gray-500 mt-1"><span id="char-count">4</span> / 16 characters</p>
 
     <label class="block mt-6 text-sm font-semibold" for="garment-select">Garment style</label>
     <select id="garment-select" class="form-input w-full mt-2 rounded bg-[#1e2226] border border-gray-600 px-4 py-3 text-gray-100">
-      <option value="Cypress Green Bass Camo Sun Hoodie (UPF 50+)" data-art="hoodie-camo" data-stage="stage-camo">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</option>
-      <option value="Marlin Cobalt Offshore Performance Jersey" data-art="jersey-cobalt" data-stage="stage-cobalt">Marlin Cobalt Offshore Performance Jersey</option>
-      <option value="Coral Pink Women's Resort UV Hoodie" data-art="hoodie-coral" data-stage="stage-coral">Coral Pink Women's Resort UV Hoodie</option>
+      <option value="Men's Rash Guard — Cypress Green Bass Camo (UPF 50+)" data-art="hoodie-camo" data-stage="stage-camo">Men's Rash Guard — Cypress Green Bass Camo (UPF 50+)</option>
+      <option value="Women's Rash Guard — Marlin Cobalt" data-art="jersey-cobalt" data-stage="stage-cobalt">Women's Rash Guard — Marlin Cobalt</option>
+      <option value="Recycled Unisex Hoodie — Coral Pink" data-art="hoodie-coral" data-stage="stage-coral">Recycled Unisex Hoodie — Coral Pink</option>
     </select>
 
     <p class="mt-6 text-sm font-semibold">Size</p>
@@ -119,8 +119,8 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 
     <div class="summary-panel mt-7">
       <dl>
-        <dt>GARMENT</dt><dd id="summary-garment">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</dd>
-        <dt>NAME ON GARMENT</dt><dd id="summary-name">REGA</dd>
+        <dt>GARMENT</dt><dd id="summary-garment">Men's Rash Guard — Cypress Green Bass Camo (UPF 50+)</dd>
+        <dt>NAME ON GARMENT</dt><dd id="summary-name">YOUR NAME</dd>
         <dt>SIZE</dt><dd id="summary-size">L</dd>
         <dt>THREAD</dt><dd id="summary-thread">4CAST Gold</dd>
       </dl>

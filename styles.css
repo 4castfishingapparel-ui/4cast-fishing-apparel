@@ -19,10 +19,10 @@ h1,h2,h3,h4,.brand-lockup{font-family:'Archivo','Inter',system-ui,sans-serif}
 .brand-lockup{font-size:1.5rem;font-weight:900;letter-spacing:.04em;display:inline-flex;align-items:baseline;gap:.45rem;color:var(--text-main);text-decoration:none}
 .brand-lockup span{color:var(--gold-primary);font-size:.82rem;font-weight:800;letter-spacing:.18em}
 .logo-mark{width:36px;height:36px;flex:none;align-self:center}
-.site-logo{height:46px;width:auto;border-radius:8px;display:block}
+.site-logo{height:64px;width:auto;border-radius:8px;display:block}
 .brand-hero{background:#0c0e10;border-bottom:1px solid #23282e;display:flex;justify-content:center;padding:1.5rem 1rem}
-.hero-logo{width:min(430px,92%);height:auto;border-radius:12px;box-shadow:0 18px 44px rgba(0,0,0,.5)}
-.footer-logo{height:76px;width:auto;border-radius:10px}
+.hero-logo{width:min(560px,94%);height:auto;border-radius:12px;box-shadow:0 18px 44px rgba(0,0,0,.5)}
+.footer-logo{height:100px;width:auto;border-radius:10px}
 
 /* Recolorable logo mark: one transparent shape, any color via background */
 .logo-tint{-webkit-mask:url('logo-mark.png') center/contain no-repeat;mask:url('logo-mark.png') center/contain no-repeat;background-color:var(--gold-primary)}
@@ -38,7 +38,7 @@ h1,h2,h3,h4,.brand-lockup{font-family:'Archivo','Inter',system-ui,sans-serif}
 .visual .chest-logo{width:72px;height:42px;top:37%}
 #preview-stage .chest-logo{width:96px;height:56px;top:40%}
 .logo-tile{border-radius:.8rem;padding:1.1rem .8rem .8rem;display:flex;flex-direction:column;align-items:center;gap:.6rem;border:1px solid #2b3138}
-.logo-tile .logo-tint{width:200px;height:116px;max-width:100%}
+.logo-tile .logo-tint{width:280px;height:162px;max-width:100%}
 .logo-tile figcaption{font-size:.72rem;letter-spacing:.14em;font-weight:700;opacity:.85}
 .thread-btn{width:34px;height:34px;border-radius:9999px;border:2px solid rgba(255,255,255,.25);cursor:pointer;padding:0}
 .thread-btn.active{border-color:#fff;box-shadow:0 0 0 3px rgba(212,175,55,.45)}
@@ -127,3 +127,16 @@ h1,h2,h3,h4,.brand-lockup{font-family:'Archivo','Inter',system-ui,sans-serif}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 @media (max-width:640px){.filmstrip{grid-template-columns:1fr}.hero-stage{grid-template-columns:1fr 1fr;padding:.8rem}.garment-svg{height:110px}}
+.p-photo{height:320px;border-radius:.7rem;overflow:hidden;position:relative}
+.p-photo img.ph{width:100%;height:100%;object-fit:cover;display:block}
+.p-photo .tag{position:absolute;top:.7rem;left:.7rem;background:rgba(10,12,14,.82);color:var(--gold-primary);font-size:.66rem;font-weight:800;letter-spacing:.14em;padding:.32rem .6rem;border-radius:999px}
+.price{font-size:1.35rem;font-weight:900;color:var(--gold-primary)}
+.sizes{font-size:.74rem;letter-spacing:.1em;color:var(--text-muted);font-weight:700}
+.order-btn{display:inline-block;background:var(--gold-primary);color:#14161a;font-weight:800;padding:.6rem 1.1rem;border-radius:.55rem;font-size:.86rem}
+.ghost-btn{display:inline-block;border:1px solid #3a4149;color:var(--text-main);font-weight:700;padding:.6rem 1.1rem;border-radius:.55rem;font-size:.86rem}
+.hero-photo{position:relative;border-radius:1rem;overflow:hidden}
+.hero-photo img{width:100%;height:520px;object-fit:cover;display:block}
+.hero-photo .overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,12,.78) 0%,rgba(8,10,12,.35) 55%,rgba(8,10,12,0) 100%);display:flex;flex-direction:column;justify-content:center;padding:2.2rem;max-width:100%}
+.mark-tile{height:320px;border-radius:.7rem;display:flex;align-items:center;justify-content:center;position:relative}
+.mark-tile .logo-tint{width:62%;height:180px}
+.mark-tile .tag{position:absolute;top:.7rem;left:.7rem;background:rgba(10,12,14,.82);color:var(--gold-primary);font-size:.66rem;font-weight:800;letter-spacing:.14em;padding:.32rem .6rem;border-radius:999px}

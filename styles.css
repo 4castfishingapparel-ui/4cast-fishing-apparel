@@ -19,10 +19,10 @@ h1,h2,h3,h4,.brand-lockup{font-family:'Archivo','Inter',system-ui,sans-serif}
 .brand-lockup{font-size:1.5rem;font-weight:900;letter-spacing:.04em;display:inline-flex;align-items:baseline;gap:.45rem;color:var(--text-main);text-decoration:none}
 .brand-lockup span{color:var(--gold-primary);font-size:.82rem;font-weight:800;letter-spacing:.18em}
 .logo-mark{width:36px;height:36px;flex:none;align-self:center}
-.site-logo{height:64px;width:auto;border-radius:8px;display:block}
+.site-logo{height:56px;width:auto;border-radius:8px;display:block}
 .brand-hero{background:#0c0e10;border-bottom:1px solid #23282e;display:flex;justify-content:center;padding:1.5rem 1rem}
 .hero-logo{width:min(560px,94%);height:auto;border-radius:12px;box-shadow:0 18px 44px rgba(0,0,0,.5)}
-.footer-logo{height:100px;width:auto;border-radius:10px}
+.footer-logo{height:148px;width:auto;border-radius:10px}
 
 /* Recolorable logo mark: one transparent shape, any color via background */
 .logo-tint{-webkit-mask:url('logo-mark.png') center/contain no-repeat;mask:url('logo-mark.png') center/contain no-repeat;background-color:var(--gold-primary)}
@@ -127,8 +127,8 @@ h1,h2,h3,h4,.brand-lockup{font-family:'Archivo','Inter',system-ui,sans-serif}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 @media (max-width:640px){.filmstrip{grid-template-columns:1fr}.hero-stage{grid-template-columns:1fr 1fr;padding:.8rem}.garment-svg{height:110px}}
-.p-photo{height:320px;border-radius:.7rem;overflow:hidden;position:relative}
-.p-photo img.ph{width:100%;height:100%;object-fit:cover;display:block}
+.p-photo{height:360px;border-radius:.7rem;overflow:hidden;position:relative}
+.p-photo img.ph{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
 .p-photo .tag{position:absolute;top:.7rem;left:.7rem;background:rgba(10,12,14,.82);color:var(--gold-primary);font-size:.66rem;font-weight:800;letter-spacing:.14em;padding:.32rem .6rem;border-radius:999px}
 .price{font-size:1.35rem;font-weight:900;color:var(--gold-primary)}
 .sizes{font-size:.74rem;letter-spacing:.1em;color:var(--text-muted);font-weight:700}

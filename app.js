@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initCustomizer();
   initSizeSelectors();
   initDesignRequest();
+  initThreadPicker();
   initReveal();
 });
 
@@ -33,10 +34,12 @@ function currentDesign() {
   var select = document.getElementById('garment-select');
   var input = document.getElementById('custom-name');
   var activeSize = document.querySelector('.size-btn.active');
+  var thread = document.getElementById('summary-thread');
   return {
     garment: select ? select.value : null,
     name: input ? input.value.trim().toUpperCase() : null,
-    size: activeSize ? activeSize.getAttribute('data-size') : null
+    size: activeSize ? activeSize.getAttribute('data-size') : null,
+    thread: thread ? thread.textContent : '4CAST Gold'
   };
 }
 
@@ -97,7 +100,7 @@ function initDesignRequest() {
         'Hi 4CAST team,\n\nI would like this design:\n\nGarment: ' + (d.garment || '') +
         '\nName on garment: ' + (d.name || '') +
         '\nSize: ' + (d.size || '') +
-        '\nThread: 4CAST Gold\n\nPlease confirm launch pricing and next steps.\n'
+        '\nThread: ' + (d.thread || '4CAST Gold') + '\n\nPlease confirm launch pricing and next steps.\n'
       );
       window.location.href = 'mailto:4castfishingapparel@gmail.com?subject=' + subject + '&body=' + body;
     });
@@ -108,6 +111,23 @@ function initDesignRequest() {
       alert('Design requests are open now — checkout opens with launch pricing. Use "Send Design Request" and we will confirm everything by email.');
     });
   }
+}
+
+function initThreadPicker() {
+  var btns = document.querySelectorAll('.thread-btn');
+  var preview = document.getElementById('preview-name');
+  var chest = document.getElementById('chest-logo');
+  var sumThread = document.getElementById('summary-thread');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var color = btn.getAttribute('data-color');
+      if (preview) { preview.style.color = color; preview.style.textShadow = '0 0 18px ' + color + '66'; }
+      if (chest) chest.style.backgroundColor = color;
+      if (sumThread) sumThread.textContent = btn.getAttribute('data-name');
+    });
+  });
 }
 
 function initReveal() {

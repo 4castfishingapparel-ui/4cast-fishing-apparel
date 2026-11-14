@@ -12,6 +12,7 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="logo-icon.png">
 </head>
 <body class="bg-[#121518] text-gray-100">
 
@@ -60,7 +61,7 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 
 <header class="sticky-header bg-[#1e2226]/95 border-b border-gray-700">
   <nav class="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
-    <a href="index.html" class="brand-lockup">4CAST <span>FISHING APPAREL</span></a>
+    <a href="index.html" class="brand-lockup"><img class="site-logo" src="logo.png" alt="4CAST Fishing Apparel logo"></a>
     <div class="hidden md:flex gap-6 text-sm">
       <a href="index.html" class="hover:text-[#e5c158]">Home</a>
       <a href="index.html#shop" class="hover:text-[#e5c158]">Shop the Launch</a>
@@ -75,6 +76,7 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
   <section id="preview-stage" class="preview-stage stage-camo rounded-lg p-8 flex flex-col items-center justify-center border border-gray-700 min-h-[380px]">
     <p id="preview-garment" class="text-gray-200 text-sm mb-2 tracking-wide">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</p>
     <svg class="garment-svg" style="height:210px"><use id="preview-use" href="#svg-hoodie-camo"/></svg>
+    <div id="chest-logo" class="logo-tint chest-logo" style="background-color:#d4af37" role="img" aria-label="4CAST logo on chest"></div>
     <p id="preview-name" class="brand-font-mono gold-glow text-5xl font-extrabold text-[#d4af37] mt-2">REGA</p>
     <p class="text-xs text-gray-300 mt-4 tracking-widest">CUSTOM NAME &bull; GOLD THREAD &bull; BACK PLACEMENT</p>
   </section>
@@ -104,12 +106,23 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
       <button class="size-btn" data-size="2XL">2XL</button>
     </div>
 
+    <p class="mt-6 text-sm font-semibold">Thread / logo color</p>
+    <div class="flex gap-2 mt-2 items-center">
+      <button class="thread-btn active" data-color="#d4af37" data-name="4CAST Gold" style="background:#d4af37" aria-label="Gold thread"></button>
+      <button class="thread-btn" data-color="#ffffff" data-name="White" style="background:#ffffff" aria-label="White thread"></button>
+      <button class="thread-btn" data-color="#7db3e8" data-name="Cobalt" style="background:#7db3e8" aria-label="Cobalt thread"></button>
+      <button class="thread-btn" data-color="#cf7488" data-name="Coral" style="background:#cf7488" aria-label="Coral thread"></button>
+      <button class="thread-btn" data-color="#9db98a" data-name="Cypress" style="background:#9db98a" aria-label="Cypress thread"></button>
+      <button class="thread-btn" data-color="#101214" data-name="Charcoal Black" style="background:#101214" aria-label="Black thread"></button>
+      <span class="text-xs text-gray-400 ml-1">The chest mark and your name switch together.</span>
+    </div>
+
     <div class="summary-panel mt-7">
       <dl>
         <dt>GARMENT</dt><dd id="summary-garment">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</dd>
         <dt>NAME ON GARMENT</dt><dd id="summary-name">REGA</dd>
         <dt>SIZE</dt><dd id="summary-size">L</dd>
-        <dt>THREAD</dt><dd>4CAST Gold</dd>
+        <dt>THREAD</dt><dd id="summary-thread">4CAST Gold</dd>
       </dl>
     </div>
 
@@ -128,7 +141,7 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
 </section>
 
 <footer class="border-t border-gray-700 py-8 text-center text-sm text-gray-400 px-4">
-  <p class="brand-lockup justify-center">4CAST <span>FISHING APPAREL</span></p>
+  <img class="footer-logo" src="logo.png" alt="4CAST Fishing Apparel logo">
   <p class="mt-3">Official contact: <a class="text-[#d4af37]" href="mailto:4castfishingapparel@gmail.com">4castfishingapparel@gmail.com</a></p>
   <p class="mt-2">&copy; 2026 4CAST Fishing Apparel. All rights reserved.</p>
 </footer>

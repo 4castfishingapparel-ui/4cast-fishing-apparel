@@ -3,47 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4CAST Fishing Apparel | Customizer Studio</title>
+<title>4CAST Fishing Apparel | Custom Studio</title>
+<meta name="description" content="Preview your last name, partner's name or boat name in gold thread on 4CAST launch garments — Cypress Green Bass Camo hoodie, Marlin Cobalt offshore jersey, Coral Pink resort hoodie.">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal800:'#1e2226', gold:'#d4af37', goldhover:'#e5c158', golddark:'#b8972b' } } } }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-[#121518] text-gray-100">
-<div class="bg-[#d4af37] text-[#121518] text-center text-sm font-semibold py-2 px-3">Your Name On The Water &bull; Live Personalization Studio</div>
-<p class="text-center text-xs text-gray-400 mt-2">Support: 4castfishingapparel@gmail.com</p>
 
-<header class="sticky-header bg-[#1e2226]/95 border-b border-gray-700 mt-2">
+<svg width="0" height="0" class="absolute" aria-hidden="true">
+  <defs>
+    <pattern id="pattern-camo" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="#2f4633"/>
+      <ellipse cx="14" cy="16" rx="16" ry="9" fill="#1f3123"/>
+      <ellipse cx="44" cy="34" rx="18" ry="10" fill="#557055"/>
+      <ellipse cx="24" cy="50" rx="13" ry="7" fill="#6d8460"/>
+      <ellipse cx="52" cy="8" rx="10" ry="6" fill="#40543c"/>
+    </pattern>
+    <pattern id="pattern-cobalt" width="60" height="30" patternUnits="userSpaceOnUse">
+      <rect width="60" height="30" fill="#123f6e"/>
+      <path d="M0 10 Q15 2 30 10 T60 10" stroke="#2f6ea6" stroke-width="4" fill="none"/>
+      <path d="M0 24 Q15 16 30 24 T60 24" stroke="#1d5a8f" stroke-width="4" fill="none"/>
+    </pattern>
+    <pattern id="pattern-coral" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#cf7488"/>
+      <path d="M-10 30 L30 -10 M0 50 L50 0" stroke="#e39aab" stroke-width="6"/>
+    </pattern>
+    <symbol id="svg-hoodie-camo" viewBox="0 0 200 160">
+      <path d="M72 34 Q100 8 128 34 L146 52 L172 104 L146 114 L146 146 L54 146 L54 114 L28 104 L54 52 Z" fill="url(#pattern-camo)" stroke="#d4af37" stroke-width="3"/>
+      <path d="M78 36 Q100 20 122 36 Q100 48 78 36Z" fill="#1e2226" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="100" cy="72" r="10" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+      <text x="100" y="78" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="13" fill="#d4af37">4</text>
+      <rect x="76" y="112" width="48" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="2"/>
+    </symbol>
+    <symbol id="svg-hoodie-coral" viewBox="0 0 200 160">
+      <path d="M72 34 Q100 8 128 34 L146 52 L172 104 L146 114 L146 146 L54 146 L54 114 L28 104 L54 52 Z" fill="url(#pattern-coral)" stroke="#d4af37" stroke-width="3"/>
+      <path d="M78 36 Q100 20 122 36 Q100 48 78 36Z" fill="#1e2226" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="100" cy="72" r="10" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+      <text x="100" y="78" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="13" fill="#d4af37">4</text>
+      <rect x="76" y="112" width="48" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="2"/>
+    </symbol>
+    <symbol id="svg-jersey-cobalt" viewBox="0 0 200 160">
+      <path d="M74 26 L54 46 L30 96 L56 106 L56 146 L144 146 L144 106 L170 96 L146 46 L126 26 Q100 44 74 26Z" fill="url(#pattern-cobalt)" stroke="#d4af37" stroke-width="3"/>
+      <path d="M84 28 Q100 42 116 28 L100 52Z" fill="#1e2226" stroke="#d4af37" stroke-width="2"/>
+      <circle cx="100" cy="76" r="10" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+      <text x="100" y="82" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="900" font-size="13" fill="#d4af37">4</text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="bg-[#d4af37] text-[#121518] text-center text-sm font-semibold py-2 px-3">YOUR NAME ON THE WATER &bull; LIVE PERSONALIZATION STUDIO</div>
+
+<header class="sticky-header bg-[#1e2226]/95 border-b border-gray-700">
   <nav class="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
-    <a href="index.html" class="text-2xl font-extrabold tracking-wide">4CAST <span class="text-[#d4af37] text-base align-middle">FISHING APPAREL</span></a>
+    <a href="index.html" class="brand-lockup">4CAST <span>FISHING APPAREL</span></a>
     <div class="hidden md:flex gap-6 text-sm">
       <a href="index.html" class="hover:text-[#e5c158]">Home</a>
-      <a href="index.html#collections" class="hover:text-[#e5c158]">His &amp; Her Collections</a>
-      <a href="customizer.html" class="hover:text-[#e5c158]">Customizer</a>
-      <a href="index.html#gear" class="hover:text-[#e5c158]">Pro Gear</a>
+      <a href="index.html#shop" class="hover:text-[#e5c158]">Shop the Launch</a>
+      <a href="index.html#his-her" class="hover:text-[#e5c158]">His &amp; Her</a>
+      <a href="customizer.html" class="hover:text-[#e5c158]">Custom Studio</a>
     </div>
-    <span class="text-sm">Cart: <span id="cart-count">0</span></span>
+    <span class="text-sm">Design Bag: <span id="cart-count">0</span></span>
   </nav>
 </header>
 
-<main class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 py-12 px-4">
-  <section class="preview-stage rounded-lg p-8 flex flex-col items-center justify-center border border-gray-700 min-h-[320px]">
-    <p id="preview-garment" class="text-gray-300 text-sm mb-4">[ Cypress Green Bass Camo Base ]</p>
-    <p id="preview-name" class="brand-font-mono gold-glow text-5xl font-extrabold text-[#d4af37]">REGA</p>
-    <p class="text-xs text-gray-400 mt-4 tracking-widest">AUTHORIZED CUSTOM STITCHED &bull; GOLD THREAD EMBOSS</p>
+<main class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 py-12 px-4">
+  <section id="preview-stage" class="preview-stage stage-camo rounded-lg p-8 flex flex-col items-center justify-center border border-gray-700 min-h-[380px]">
+    <p id="preview-garment" class="text-gray-200 text-sm mb-2 tracking-wide">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</p>
+    <svg class="garment-svg" style="height:210px"><use id="preview-use" href="#svg-hoodie-camo"/></svg>
+    <p id="preview-name" class="brand-font-mono gold-glow text-5xl font-extrabold text-[#d4af37] mt-2">REGA</p>
+    <p class="text-xs text-gray-300 mt-4 tracking-widest">CUSTOM NAME &bull; GOLD THREAD &bull; BACK PLACEMENT</p>
   </section>
 
   <section>
-    <h1 class="text-3xl font-bold">Customizer Studio</h1>
-    <label class="block mt-6 text-sm font-semibold" for="custom-name">Last name / partner name / boat name (max 16 characters)</label>
+    <p class="product-tag">4CAST CUSTOM STUDIO</p>
+    <h1 class="text-3xl md:text-4xl font-extrabold mt-2">Design Yours</h1>
+    <p class="text-gray-400 mt-3">Type the name, pick the garment, choose a size — the preview updates live, exactly like it will sit on the back of the garment.</p>
+
+    <label class="block mt-7 text-sm font-semibold" for="custom-name">Last name / partner name / boat name</label>
     <input id="custom-name" type="text" maxlength="16" value="REGA" placeholder="e.g., REGA" class="form-input w-full mt-2 rounded bg-[#1e2226] border border-gray-600 px-4 py-3 text-gray-100">
+    <p class="text-xs text-gray-500 mt-1"><span id="char-count">4</span> / 16 characters</p>
 
     <label class="block mt-6 text-sm font-semibold" for="garment-select">Garment style</label>
     <select id="garment-select" class="form-input w-full mt-2 rounded bg-[#1e2226] border border-gray-600 px-4 py-3 text-gray-100">
-      <option value="Cypress Green Bass Camo Sun Hoodie (UPF 50+)">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</option>
-      <option value="Marlin Cobalt Offshore Performance Jersey">Marlin Cobalt Offshore Performance Jersey</option>
-      <option value="Coral Pink Women's Resort UV Hoodie">Coral Pink Women's Resort UV Hoodie</option>
+      <option value="Cypress Green Bass Camo Sun Hoodie (UPF 50+)" data-art="hoodie-camo" data-stage="stage-camo">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</option>
+      <option value="Marlin Cobalt Offshore Performance Jersey" data-art="jersey-cobalt" data-stage="stage-cobalt">Marlin Cobalt Offshore Performance Jersey</option>
+      <option value="Coral Pink Women's Resort UV Hoodie" data-art="hoodie-coral" data-stage="stage-coral">Coral Pink Women's Resort UV Hoodie</option>
     </select>
 
     <p class="mt-6 text-sm font-semibold">Size</p>
@@ -55,14 +104,32 @@ tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal
       <button class="size-btn" data-size="2XL">2XL</button>
     </div>
 
-    <p class="mt-6 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p>
-    <button id="checkout-btn" class="btn-gold rounded px-6 py-3 font-semibold mt-4 w-full">Proceed to Secure Checkout</button>
-    <p class="text-xs text-gray-400 mt-3">Checkout is a placeholder until Stripe is connected and prices are set by Chris.</p>
+    <div class="summary-panel mt-7">
+      <dl>
+        <dt>GARMENT</dt><dd id="summary-garment">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</dd>
+        <dt>NAME ON GARMENT</dt><dd id="summary-name">REGA</dd>
+        <dt>SIZE</dt><dd id="summary-size">L</dd>
+        <dt>THREAD</dt><dd>4CAST Gold</dd>
+      </dl>
+    </div>
+
+    <button id="request-btn" class="btn-gold rounded px-6 py-3 font-semibold mt-5 w-full">Send Design Request</button>
+    <button class="add-cart btn-ghost rounded px-6 py-3 font-semibold mt-3 w-full" data-garment="Custom Studio design">Add Design to Bag</button>
+    <p class="text-xs text-gray-400 mt-3">Sending a design request opens an email to 4castfishingapparel@gmail.com with your garment, name and size filled in. No payment is taken now — we confirm your design and launch pricing by email before anything is charged.</p>
   </section>
 </main>
 
-<footer class="border-t border-gray-700 py-8 text-center text-sm text-gray-400">
-  <p>Official Business Contact: <a class="text-[#d4af37]" href="mailto:4castfishingapparel@gmail.com">4castfishingapparel@gmail.com</a></p>
+<section class="max-w-6xl mx-auto px-4 pb-14">
+  <div class="grid md:grid-cols-3 gap-6 text-sm">
+    <div class="summary-panel"><h3 class="font-bold">The Lake Line</h3><p class="text-gray-400 mt-2">Cypress Green Bass Camo — UPF 50+ sun hoodie with moisture-wicking poly-spandex and laser-cut underarm ventilation.</p></div>
+    <div class="summary-panel"><h3 class="font-bold">The Offshore Line</h3><p class="text-gray-400 mt-2">Marlin Cobalt — saltwater performance fabric, quick-dry 4-way stretch, tailored athletic fit with thumbholes.</p></div>
+    <div class="summary-panel"><h3 class="font-bold">The Resort Line</h3><p class="text-gray-400 mt-2">Coral Pink — the women's resort UV hoodie, made to pair with the His &amp; Her lineup.</p></div>
+  </div>
+</section>
+
+<footer class="border-t border-gray-700 py-8 text-center text-sm text-gray-400 px-4">
+  <p class="brand-lockup justify-center">4CAST <span>FISHING APPAREL</span></p>
+  <p class="mt-3">Official contact: <a class="text-[#d4af37]" href="mailto:4castfishingapparel@gmail.com">4castfishingapparel@gmail.com</a></p>
   <p class="mt-2">&copy; 2026 4CAST Fishing Apparel. All rights reserved.</p>
 </footer>
 <script src="app.js"></script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4CAST Fishing Apparel | Customizer Studio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal800:'#1e2226', gold:'#d4af37', goldhover:'#e5c158', golddark:'#b8972b' } } } }
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#121518] text-gray-100">
+<div class="bg-[#d4af37] text-[#121518] text-center text-sm font-semibold py-2 px-3">Your Name On The Water &bull; Live Personalization Studio</div>
+<p class="text-center text-xs text-gray-400 mt-2">Support: 4castfishingapparel@gmail.com</p>
+
+<header class="sticky-header bg-[#1e2226]/95 border-b border-gray-700 mt-2">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
+    <a href="index.html" class="text-2xl font-extrabold tracking-wide">4CAST <span class="text-[#d4af37] text-base align-middle">FISHING APPAREL</span></a>
+    <div class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-[#e5c158]">Home</a>
+      <a href="index.html#collections" class="hover:text-[#e5c158]">His &amp; Her Collections</a>
+      <a href="customizer.html" class="hover:text-[#e5c158]">Customizer</a>
+      <a href="index.html#gear" class="hover:text-[#e5c158]">Pro Gear</a>
+    </div>
+    <span class="text-sm">Cart: <span id="cart-count">0</span></span>
+  </nav>
+</header>
+
+<main class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 py-12 px-4">
+  <section class="preview-stage rounded-lg p-8 flex flex-col items-center justify-center border border-gray-700 min-h-[320px]">
+    <p id="preview-garment" class="text-gray-300 text-sm mb-4">[ Cypress Green Bass Camo Base ]</p>
+    <p id="preview-name" class="brand-font-mono gold-glow text-5xl font-extrabold text-[#d4af37]">REGA</p>
+    <p class="text-xs text-gray-400 mt-4 tracking-widest">AUTHORIZED CUSTOM STITCHED &bull; GOLD THREAD EMBOSS</p>
+  </section>
+
+  <section>
+    <h1 class="text-3xl font-bold">Customizer Studio</h1>
+    <label class="block mt-6 text-sm font-semibold" for="custom-name">Last name / partner name / boat name (max 16 characters)</label>
+    <input id="custom-name" type="text" maxlength="16" value="REGA" placeholder="e.g., REGA" class="form-input w-full mt-2 rounded bg-[#1e2226] border border-gray-600 px-4 py-3 text-gray-100">
+
+    <label class="block mt-6 text-sm font-semibold" for="garment-select">Garment style</label>
+    <select id="garment-select" class="form-input w-full mt-2 rounded bg-[#1e2226] border border-gray-600 px-4 py-3 text-gray-100">
+      <option value="Cypress Green Bass Camo Sun Hoodie (UPF 50+)">Cypress Green Bass Camo Sun Hoodie (UPF 50+)</option>
+      <option value="Marlin Cobalt Offshore Performance Jersey">Marlin Cobalt Offshore Performance Jersey</option>
+      <option value="Coral Pink Women's Resort UV Hoodie">Coral Pink Women's Resort UV Hoodie</option>
+    </select>
+
+    <p class="mt-6 text-sm font-semibold">Size</p>
+    <div class="flex gap-2 mt-2">
+      <button class="size-btn" data-size="S">S</button>
+      <button class="size-btn" data-size="M">M</button>
+      <button class="size-btn active" data-size="L">L</button>
+      <button class="size-btn" data-size="XL">XL</button>
+      <button class="size-btn" data-size="2XL">2XL</button>
+    </div>
+
+    <p class="mt-6 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p>
+    <button id="checkout-btn" class="btn-gold rounded px-6 py-3 font-semibold mt-4 w-full">Proceed to Secure Checkout</button>
+    <p class="text-xs text-gray-400 mt-3">Checkout is a placeholder until Stripe is connected and prices are set by Chris.</p>
+  </section>
+</main>
+
+<footer class="border-t border-gray-700 py-8 text-center text-sm text-gray-400">
+  <p>Official Business Contact: <a class="text-[#d4af37]" href="mailto:4castfishingapparel@gmail.com">4castfishingapparel@gmail.com</a></p>
+  <p class="mt-2">&copy; 2026 4CAST Fishing Apparel. All rights reserved.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

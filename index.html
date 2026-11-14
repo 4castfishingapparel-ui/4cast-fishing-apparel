@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4CAST Fishing Apparel | Your Name On The Water</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: { colors: { charcoal900:'#121518', charcoal800:'#1e2226', gold:'#d4af37', goldhover:'#e5c158', golddark:'#b8972b' } } } }
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#121518] text-gray-100">
+<div class="bg-[#d4af37] text-[#121518] text-center text-sm font-semibold py-2 px-3">Tournament-Grade Performance &bull; Customize Your Gear With Your Last Name On The Back</div>
+
+<header class="sticky-header bg-[#1e2226]/95 border-b border-gray-700">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between py-4 px-4">
+    <a href="index.html" class="text-2xl font-extrabold tracking-wide">4CAST <span class="text-[#d4af37] text-base align-middle">FISHING APPAREL</span></a>
+    <div class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-[#e5c158]">Home</a>
+      <a href="#collections" class="hover:text-[#e5c158]">His &amp; Her Collections</a>
+      <a href="customizer.html" class="hover:text-[#e5c158]">Customizer</a>
+      <a href="#gear" class="hover:text-[#e5c158]">Pro Gear</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="text-sm">Cart: <span id="cart-count">0</span></span>
+      <a href="customizer.html" class="btn-gold rounded px-4 py-2 text-sm">Customize Gear</a>
+    </div>
+  </nav>
+</header>
+
+<section class="max-w-6xl mx-auto text-center py-16 px-4">
+  <p class="text-[#d4af37] tracking-widest text-sm font-semibold">CENTRAL FLORIDA ROOTS &bull; BUILT FOR THE PROS</p>
+  <h1 class="text-5xl md:text-6xl font-extrabold mt-4">Your Name On <span class="gold-glow text-[#d4af37]">The Water</span></h1>
+  <p class="max-w-2xl mx-auto mt-6 text-gray-300">From dawn on the lake in Cypress Green Bass Camo to the deep blue offshore marlin grounds. Technical UPF 50+ performance gear, custom-stitched with your name and legacy.</p>
+  <div class="mt-8 flex gap-4 justify-center">
+    <a href="#collections" class="btn-gold rounded px-6 py-3 font-semibold">Explore Collections</a>
+    <a href="customizer.html" class="border border-[#d4af37] text-[#d4af37] rounded px-6 py-3 font-semibold hover:bg-[#1e2226]">Try Customizer</a>
+  </div>
+</section>
+
+<section id="collections" class="max-w-6xl mx-auto py-10 px-4">
+  <h2 class="text-3xl font-bold text-center">The Jason &amp; Katie Lineup</h2>
+  <div class="grid md:grid-cols-2 gap-6 mt-8">
+    <div class="product-card bg-[#1e2226] rounded-lg p-6 border border-gray-700">
+      <div class="bg-gray-700/50 rounded h-40 flex items-center justify-center text-gray-400">[ Cypress Green Bass Camo Base ]</div>
+      <h3 class="text-xl font-bold mt-4">His &mdash; Cypress Green Bass Camo Sun Hoodie</h3>
+      <ul class="text-gray-300 text-sm mt-2 list-disc ml-5">
+        <li>UPF 50+ sun protection</li>
+        <li>Moisture-wicking poly-spandex blend</li>
+        <li>Laser-cut underarm ventilation</li>
+        <li>Custom last-name back embroidery</li>
+      </ul>
+      <p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p>
+      <button class="add-cart btn-gold rounded px-4 py-2 mt-3 text-sm" data-garment="Cypress Green Bass Camo Sun Hoodie">Add To Cart</button>
+    </div>
+    <div class="product-card bg-[#1e2226] rounded-lg p-6 border border-gray-700">
+      <div class="bg-gray-700/50 rounded h-40 flex items-center justify-center text-gray-400">[ Marlin Cobalt Offshore Base ]</div>
+      <h3 class="text-xl font-bold mt-4">Her &mdash; Marlin Cobalt Offshore Performance Jersey</h3>
+      <ul class="text-gray-300 text-sm mt-2 list-disc ml-5">
+        <li>Saltwater-specific performance fabric</li>
+        <li>Quick-dry 4-way stretch</li>
+        <li>Tailored feminine athletic fit, thumbholes</li>
+        <li>Custom-stitched naming</li>
+      </ul>
+      <p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p>
+      <button class="add-cart btn-gold rounded px-4 py-2 mt-3 text-sm" data-garment="Marlin Cobalt Offshore Performance Jersey">Add To Cart</button>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto py-10 px-4">
+  <div class="bg-[#1e2226] border border-[#d4af37]/40 rounded-lg p-8 text-center">
+    <h2 class="text-3xl font-bold">Put Your Name On The Water</h2>
+    <p class="text-gray-300 mt-3">Personalization Engine &mdash; preview your last name, partner&rsquo;s name, or boat name in gold thread, live.</p>
+    <a href="customizer.html" class="btn-gold rounded px-6 py-3 font-semibold inline-block mt-6">Preview Custom Design</a>
+  </div>
+</section>
+
+<section id="gear" class="max-w-6xl mx-auto py-10 px-4 pb-16">
+  <h2 class="text-3xl font-bold text-center">Tournament-Grade Accessories</h2>
+  <div class="grid md:grid-cols-4 gap-6 mt-8 text-sm">
+    <div class="product-card bg-[#1e2226] rounded-lg p-5 border border-gray-700"><h3 class="font-bold">Amphibious Board Shorts</h3><p class="text-gray-300 mt-2">Quick-dry, 4-way stretch, reinforced plier pockets.</p><p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p><button class="add-cart btn-gold rounded px-3 py-2 mt-3" data-garment="Amphibious Board Shorts">Add To Cart</button></div>
+    <div class="product-card bg-[#1e2226] rounded-lg p-5 border border-gray-700"><h3 class="font-bold">Floating Boonie Hat</h3><p class="text-gray-300 mt-2">UPF 50+, water-repellent, float foam core.</p><p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p><button class="add-cart btn-gold rounded px-3 py-2 mt-3" data-garment="Floating Boonie Hat">Add To Cart</button></div>
+    <div class="product-card bg-[#1e2226] rounded-lg p-5 border border-gray-700"><h3 class="font-bold">Polarized Sport Sunglasses</h3><p class="text-gray-300 mt-2">TAC glare-reducing lenses, custom temple branding.</p><p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p><button class="add-cart btn-gold rounded px-3 py-2 mt-3" data-garment="Polarized Sport Sunglasses">Add To Cart</button></div>
+    <div class="product-card bg-[#1e2226] rounded-lg p-5 border border-gray-700"><h3 class="font-bold">3D Embroidered Trucker Hat</h3><p class="text-gray-300 mt-2">Structured mesh-back, 3D gold-thread icon logo.</p><p class="mt-3 text-[#d4af37] font-semibold">[Insert Price Placeholder]</p><button class="add-cart btn-gold rounded px-3 py-2 mt-3" data-garment="3D Embroidered Trucker Hat">Add To Cart</button></div>
+  </div>
+</section>
+
+<footer class="border-t border-gray-700 py-8 text-center text-sm text-gray-400">
+  <p>Rooted in Central Florida. Built for the competitive waters worldwide.</p>
+  <p class="mt-2">Support: <a class="text-[#d4af37]" href="mailto:4castfishingapparel@gmail.com">4castfishingapparel@gmail.com</a></p>
+  <p class="mt-2">&copy; 2026 4CAST Fishing Apparel. All rights reserved.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
